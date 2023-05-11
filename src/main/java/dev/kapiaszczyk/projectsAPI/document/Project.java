@@ -18,7 +18,7 @@ public class Project {
     private String projectURL;
 
     @DocumentReference
-    private Set<ObjectId> projectTechnologies;
+    private Set<Technology> projectTechnologies;
 
     public ObjectId getProjectId() {
         return projectId;
@@ -60,15 +60,15 @@ public class Project {
         this.projectURL = projectURL;
     }
 
-    public Set<ObjectId> getProjectTechnologies() {
+    public Set<Technology> getProjectTechnologies() {
         return projectTechnologies;
     }
 
-    public void setProjectTechnologies(Set<ObjectId> projectTechnologies) {
+    public void setProjectTechnologies(Set<Technology> projectTechnologies) {
         this.projectTechnologies = projectTechnologies;
     }
 
-    public Project(ObjectId projectId, String projectTitle, String projectDescription, String projectLanguage, String projectURL, Set<ObjectId> projectTechnologies) {
+    public Project(ObjectId projectId, String projectTitle, String projectDescription, String projectLanguage, String projectURL, Set<Technology> projectTechnologies) {
         this.projectId = projectId;
         this.projectTitle = projectTitle;
         this.projectDescription = projectDescription;
