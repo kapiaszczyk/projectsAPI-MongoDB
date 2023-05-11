@@ -12,6 +12,7 @@ public class Project {
 
     @Id
     private ObjectId projectId;
+    private int projectPublicId;
     private String projectName;
     private String projectDescription;
     private String projectLanguage;
@@ -26,6 +27,14 @@ public class Project {
 
     public void setProjectId(ObjectId projectId) {
         this.projectId = projectId;
+    }
+
+    public int getProjectPublicId() {
+        return projectPublicId;
+    }
+
+    public void setProjectPublic(int publicId) {
+        this.projectPublicId = publicId;
     }
 
     public String getProjectName() {
@@ -68,8 +77,9 @@ public class Project {
         this.projectTechnologies = projectTechnologies;
     }
 
-    public Project(ObjectId projectId, String projectTitle, String projectDescription, String projectLanguage, String projectURL, Set<Technology> projectTechnologies) {
+    public Project(ObjectId projectId, int projectPublicId, String projectTitle, String projectDescription, String projectLanguage, String projectURL, Set<Technology> projectTechnologies) {
         this.projectId = projectId;
+        this.projectPublicId = projectPublicId;
         this.projectName = projectTitle;
         this.projectDescription = projectDescription;
         this.projectLanguage = projectLanguage;
