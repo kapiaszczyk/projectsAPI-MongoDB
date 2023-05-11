@@ -1,4 +1,4 @@
-package dev.kapiaszczyk.projectsAPI.respository;
+package dev.kapiaszczyk.projectsAPI.repository;
 
 import dev.kapiaszczyk.projectsAPI.document.Project;
 import org.springframework.data.mongodb.repository.MongoRepository;
