@@ -1,7 +1,9 @@
 package dev.kapiaszczyk.projectsAPI.document;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.Set;
 
@@ -9,18 +11,20 @@ import java.util.Set;
 public class Project {
 
     @Id
-    private String projectId;
+    private ObjectId projectId;
     private String projectTitle;
     private String projectDescription;
     private String projectLanguage;
     private String projectURL;
-    private Set<String> projectTechnologies;
 
-    public String getProjectId() {
+    @DocumentReference
+    private Set<ObjectId> projectTechnologies;
+
+    public ObjectId getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(String projectId) {
+    public void setProjectId(ObjectId projectId) {
         this.projectId = projectId;
     }
 
@@ -56,15 +60,15 @@ public class Project {
         this.projectURL = projectURL;
     }
 
-    public Set<String> getProjectTechnologies() {
+    public Set<ObjectId> getProjectTechnologies() {
         return projectTechnologies;
     }
 
-    public void setProjectTechnologies(Set<String> projectTechnologies) {
+    public void setProjectTechnologies(Set<ObjectId> projectTechnologies) {
         this.projectTechnologies = projectTechnologies;
     }
 
-    public Project(String projectId, String projectTitle, String projectDescription, String projectLanguage, String projectURL, Set<String> projectTechnologies) {
+    public Project(ObjectId projectId, String projectTitle, String projectDescription, String projectLanguage, String projectURL, Set<ObjectId> projectTechnologies) {
         this.projectId = projectId;
         this.projectTitle = projectTitle;
         this.projectDescription = projectDescription;
