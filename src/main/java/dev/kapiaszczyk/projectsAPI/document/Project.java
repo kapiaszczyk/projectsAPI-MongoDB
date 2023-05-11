@@ -12,7 +12,7 @@ public class Project {
 
     @Id
     private ObjectId projectId;
-    private String projectTitle;
+    private String projectName;
     private String projectDescription;
     private String projectLanguage;
     private String projectURL;
@@ -28,12 +28,12 @@ public class Project {
         this.projectId = projectId;
     }
 
-    public String getProjectTitle() {
-        return projectTitle;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setProjectTitle(String projectTitle) {
-        this.projectTitle = projectTitle;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
     public String getProjectDescription() {
@@ -70,7 +70,7 @@ public class Project {
 
     public Project(ObjectId projectId, String projectTitle, String projectDescription, String projectLanguage, String projectURL, Set<Technology> projectTechnologies) {
         this.projectId = projectId;
-        this.projectTitle = projectTitle;
+        this.projectName = projectTitle;
         this.projectDescription = projectDescription;
         this.projectLanguage = projectLanguage;
         this.projectURL = projectURL;
