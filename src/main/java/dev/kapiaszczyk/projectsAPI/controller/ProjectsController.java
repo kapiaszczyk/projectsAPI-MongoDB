@@ -45,4 +45,14 @@ public class ProjectsController {
         }
     }
 
+    @GetMapping("/language/{projectLanguage}")
+    public ResponseEntity<List<Project>> getProjectByProjectLanguage(@PathVariable("projectLanguage") String projectLanguage) {
+        List<Project> projects = projectService.getProjectByProjectLanguage(projectLanguage);
+        if (projects.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok(projects);
+        }
+    }
+
 }
