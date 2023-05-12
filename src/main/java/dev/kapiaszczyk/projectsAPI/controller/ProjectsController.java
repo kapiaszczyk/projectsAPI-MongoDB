@@ -35,5 +35,14 @@ public class ProjectsController {
         }
     }
 
+    @GetMapping("/name/{projectName}")
+    public ResponseEntity<List<Project>> getProjectByProjectName(@PathVariable("projectName") String projectName) {
+        List<Project> projects = projectService.getProjectByProjectName(projectName);
+        if (projects.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok(projects);
+        }
+    }
 
 }
