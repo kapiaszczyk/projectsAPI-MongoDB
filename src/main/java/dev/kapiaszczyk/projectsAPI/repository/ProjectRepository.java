@@ -15,4 +15,6 @@ public interface ProjectRepository extends MongoRepository<Project, ObjectId> {
 
         List<Project> findByProjectNameLike(String projectName);
 
+        List<Project> findByProjectLanguageLike(String projectLanguage);
+
 }
