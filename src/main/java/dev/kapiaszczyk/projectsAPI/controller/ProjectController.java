@@ -57,4 +57,20 @@ public class ProjectController {
         return new ResponseEntity<>(projectService.addProject(project), HttpStatus.CREATED);
     }
 
+    @PutMapping("/update/{projectPublicId}")
+    public ResponseEntity<Project> updateProject(@PathVariable("projectPublicId") int projectPublicId, @RequestBody Project project) {
+        Optional<Project> projectOptional = projectService.getProjectByProjectPublicId(projectPublicId);
+        if (projectOptional.isPresent()) {
+            Project projectToUpdate = projectOptional.get();
+            projectToUpdate.setProjectName(project.getProjectName());
+            projectToUpdate.setProjectDescription(project.getProjectDescription());
+            projectToUpdate.setProjectLanguage(project.getProjectLanguage());
+            projectToUpdate.setProjectURL(project.getProjectURL());
+            projectToUpdate.setProjectPublicId(project.getProjectPublicId());
+            return new ResponseEntity<>(projectService.updateProject(projectToUpdate), HttpStatus.OK);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
