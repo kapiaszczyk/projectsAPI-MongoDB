@@ -22,6 +22,10 @@ public class ProjectService {
         return projectRepository.findByProjectPublicId(projectPublicId);
     }
 
+    public List<Project> getProjectByProjectName(String projectName) {
+        return projectRepository.findByProjectNameLike(projectName);
+    }
+
 
 
 }
