@@ -26,6 +26,10 @@ public class ProjectService {
         return projectRepository.findByProjectNameLike(projectName);
     }
 
+    public List<Project> getProjectByProjectLanguage(String projectLanguage) {
+        return projectRepository.findByProjectLanguageLike(projectLanguage);
+    }
+
 
 
 }
