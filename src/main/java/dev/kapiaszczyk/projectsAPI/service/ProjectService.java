@@ -30,6 +30,10 @@ public class ProjectService {
         return projectRepository.findByProjectLanguageLike(projectLanguage);
     }
 
+    public Project addProject(Project project) {
+        return projectRepository.save(project);
+    }
+
 
 
 }
