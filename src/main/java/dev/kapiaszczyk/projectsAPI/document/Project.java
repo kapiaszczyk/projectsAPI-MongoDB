@@ -30,7 +30,7 @@ public class Project {
         return projectPublicId;
     }
 
-    public void setProjectPublic(int publicId) {
+    public void setProjectPublicId(int publicId) {
         this.projectPublicId = publicId;
     }
 
