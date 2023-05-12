@@ -73,4 +73,15 @@ public class ProjectController {
         }
     }
 
+    @DeleteMapping("/delete/{projectPublicId}")
+    public ResponseEntity<Project> deleteProject(@PathVariable("projectPublicId") int projectPublicId) {
+        Optional<Project> projectOptional = projectService.getProjectByProjectPublicId(projectPublicId);
+        if (projectOptional.isPresent()) {
+            projectService.deleteProject(projectOptional.get());
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
