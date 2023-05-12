@@ -3,8 +3,6 @@ package dev.kapiaszczyk.projectsAPI.document;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.DocumentReference;
-
 import java.util.Set;
 
 @Document(collection = "projects")
@@ -18,7 +16,6 @@ public class Project {
     private String projectLanguage;
     private String projectURL;
 
-    @DocumentReference
     private Set<Technology> projectTechnologies;
 
     public ObjectId getProjectId() {
