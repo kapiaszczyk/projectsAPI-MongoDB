@@ -10,6 +10,7 @@ This project is a simple REST API that retrieves data from a MongoDB database. I
 ## Built With
 * [![Java][Java]][Java-url]
 * [![Spring Boot][Spring Boot]][Spring Boot-url]
+* [![Spring Web][Spring Web]][Spring Web-url]
 * [![Spring MongoDB][Spring MongoDB]][Spring MongoDB-url]
 * [![MongoDB][MongoDB]][MongoDB-url]
 * [![Maven][Maven]][Maven-url]
@@ -24,6 +25,8 @@ This project is a simple REST API that retrieves data from a MongoDB database. I
 [Java-url]: https://www.java.com/en/
 [Spring Boot]: https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot
 [Spring Boot-url]: https://spring.io/projects/spring-boot
+[Spring Web]: https://img.shields.io/badge/Spring_Web-6DB33F?style=for-the-badge&logo=spring&logoColor=white
+[Spring Web-url]: https://spring.io/guides/gs/spring-boot/
 [Spring MongoDB]: https://img.shields.io/badge/Spring_MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
 [Spring MongoDB-url]: https://spring.io/projects/spring-data-mongodb
 [MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
